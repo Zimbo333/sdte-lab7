@@ -1,0 +1,27 @@
+- hosts: host01
+  tasks:
+  - name: "Replace Color host01"
+    replace: 
+      path: /var/www/default/index.html
+      regexp: '<h1>'
+      replace: '<h1 style="color:red">'
+      backup: yes
+
+- hosts: host02
+  tasks:
+  - name: "Replace Color host02"
+    replace: 
+      path: /var/www/default/index.html
+      regexp: '<h1>'
+      replace: '<h1 style="color:green">'
+      backup: yes
+
+- hosts: host03
+  tasks:
+  - name: "Replace Color host03"
+    replace: 
+      path: /var/www/default/index.html
+      regexp: '<h1>'
+      replace: '<h1 style="color:blue">'
+      backup: yes
+
